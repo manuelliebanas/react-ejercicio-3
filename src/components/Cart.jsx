@@ -23,7 +23,7 @@ const Cart = () => {
             {(cartList?.length === 0) && <p>Tu carrito esta vacio</p>}
             {(cartList?.length !== 0) && <button onClick={clearCart}>Delete all</button>}
             {cartList.map((item) =>
-                <Product>
+                <Product key={item.id}>
                     <ProductDetail>
                         <ImageCart src={item.image}/>
                         <Details>
